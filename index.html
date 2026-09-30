@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071A2F">
+    <meta name="description" content="FaithWalls — Christian wallpapers, live wallpapers, Bible stories and custom wallpaper creation.">
+    <title>FaithWalls — Christian Wallpaper Studio</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+<div class="page">
+
+    <header class="header">
+        <div class="brand">
+            <div class="brand-mark">✝</div>
+            <div>
+                <div class="brand-name">FaithWalls</div>
+                <div class="brand-sub">CHRISTIAN WALLPAPER STUDIO</div>
+            </div>
+        </div>
+
+        <div class="header-meta">
+            1080 × 1920 · Faith • Hope • Scripture
+        </div>
+    </header>
+
+    <main class="layout">
+
+        <!-- PHONE PREVIEW -->
+        <section class="preview-column">
+            <div class="preview-area">
+                <div class="phone-glow" id="phoneGlow"></div>
+
+                <div class="phone">
+                    <div class="phone-screen">
+
+                        <video id="wallpaperVideo"
+                            autoplay loop muted playsinline></video>
+
+                        <canvas id="wallpaperCanvas"></canvas>
+
+                        <img id="wallpaperImage" alt="Christian wallpaper">
+
+                        <div class="phone-notch"></div>
+
+                        <div class="status-bar">
+                            <span id="previewTime">9:41</span>
+                            <span>● ● ●</span>
+                        </div>
+
+                        <div class="verse-overlay" id="verseOverlay">
+                            <strong id="previewVerse">Be strong and courageous.</strong>
+                            <small id="previewReference">Joshua 1:9</small>
+                        </div>
+                    </div>
+
+                    <div class="volume-button volume-one"></div>
+                    <div class="volume-button volume-two"></div>
+                    <div class="power-button"></div>
+                </div>
+            </div>
+
+            <p id="previewCaption" class="preview-caption">
+                Select a Christian wallpaper or live video.
+            </p>
+
+            <button id="setWallpaperButton" class="main-button">
+                <span class="button-icon">⬇</span>
+                <span>Download Wallpaper</span>
+            </button>
+
+            <p class="download-note">
+                Images download as wallpapers. Videos download as MP4 live-wallpaper files.
+            </p>
+        </section>
+
+
+        <!-- CONTROLS -->
+        <section class="controls-column">
+
+            <!-- CHRISTIAN WALLPAPERS -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Christian Wallpapers</h2>
+                        <p>Choose a Scripture-inspired image.</p>
+                    </div>
+                </div>
+
+                <div id="imageButtons" class="image-grid"></div>
+            </div>
+
+
+            <!-- LIVE WALLPAPERS -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Live Wallpapers</h2>
+                        <p>Choose a Christian motion wallpaper.</p>
+                    </div>
+                </div>
+
+                <div id="videoButtons" class="video-grid"></div>
+            </div>
+
+
+            <!-- BIBLE VERSE -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Bible Verse</h2>
+                        <p>Add Scripture to the phone preview.</p>
+                    </div>
+                </div>
+
+                <label class="field">
+                    <span>Verse</span>
+                    <input id="verseInput" type="text"
+                        value="Be strong and courageous."
+                        maxlength="120">
+                </label>
+
+                <label class="field">
+                    <span>Reference</span>
+                    <input id="referenceInput" type="text"
+                        value="Joshua 1:9"
+                        maxlength="50">
+                </label>
+            </div>
+
+
+            <!-- CUSTOM CREATOR -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Create Your Wallpaper</h2>
+                        <p>Upload two images and combine them with Scripture.</p>
+                    </div>
+                </div>
+
+                <label class="upload-box">
+                    <span>📷 First image</span>
+                    <input id="imageOneInput" type="file" accept="image/*">
+                </label>
+
+                <label class="upload-box">
+                    <span>📷 Second image</span>
+                    <input id="imageTwoInput" type="file" accept="image/*">
+                </label>
+
+                <div class="segment-group">
+                    <button class="segment active" data-position="center">Center</button>
+                    <button class="segment" data-position="top">Top</button>
+                    <button class="segment" data-position="bottom">Bottom</button>
+                </div>
+
+                <button id="createButton" class="main-button small-main">
+                    ✨ Create Christian Wallpaper
+                </button>
+            </div>
+
+
+            <!-- BIBLE STORIES -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Bible Stories</h2>
+                        <p>Scenes you can turn into wallpapers.</p>
+                    </div>
+                </div>
+
+                <div class="story-list">
+                    <button class="story-button" data-image="images/wallpaper10_moses.jpg" data-verse="I AM WHO I AM." data-reference="Exodus 3:14">🔥 Moses & the Burning Bush</button>
+                    <button class="story-button" data-image="images/wallpaper5_resurrection.jpg" data-verse="He is risen." data-reference="Matthew 28:6">✝ Resurrection</button>
+                    <button class="story-button" data-image="images/wallpaper2_jesus_portrait.jpg" data-verse="Follow me." data-reference="Matthew 4:19">🕊 Jesus</button>
+                    <button class="story-button" data-image="images/wallpaper8_nativity.jpg" data-verse="For unto you is born a Savior." data-reference="Luke 2:11">⭐ Nativity</button>
+                    <button class="story-button" data-image="images/wallpaper11_lion_of_judah.jpg" data-verse="The Lion of the tribe of Judah." data-reference="Revelation 5:5">🦁 Lion of Judah</button>
+                </div>
+            </div>
+
+
+            <!-- AI PROMPT IDEAS -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Christian AI Prompt Ideas</h2>
+                        <p>Tap a prompt to copy it.</p>
+                    </div>
+                </div>
+                <div id="promptList" class="prompt-list"></div>
+            </div>
+
+        </section>
+    </main>
+</div>
+
+
+<!-- DOWNLOAD SHEET -->
+<div id="wallpaperSheet" class="sheet-overlay">
+    <div class="sheet">
+        <div class="sheet-handle"></div>
+        <h2>Download wallpaper</h2>
+        <p class="sheet-subtitle">Choose how you want to save it.</p>
+
+        <button class="sheet-option" data-target="home">
+            <div class="sheet-icon">🏠</div>
+            <div class="sheet-text">
+                <strong>Home screen</strong>
+                <span>Download for your home screen</span>
+            </div>
+            <div class="arrow">→</div>
+        </button>
+
+        <button class="sheet-option" data-target="lock">
+            <div class="sheet-icon">🔒</div>
+            <div class="sheet-text">
+                <strong>Lock screen</strong>
+                <span>Download for your lock screen</span>
+            </div>
+            <div class="arrow">→</div>
+        </button>
+
+        <button class="sheet-option" data-target="both">
+            <div class="sheet-icon">📱</div>
+            <div class="sheet-text">
+                <strong>Home & lock screen</strong>
+                <span>Download the selected wallpaper</span>
+            </div>
+            <div class="arrow">→</div>
+        </button>
+
+        <button id="cancelSheet" class="cancel-button">Cancel</button>
+    </div>
+</div>
+
+<div id="toast" class="toast">Done</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
