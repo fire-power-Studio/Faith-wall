@@ -4,9 +4,15 @@
    ========================================================= */
 
 const IMAGES = [
-    { name: "Cross at Sunrise", file: "images/wallpaper1_cross_sunrise.jpg" },
-    { name: "Jesus", file: "images/wallpaper2_jesus_portrait.jpg" },
-    { name: "God's Word", file: "images/wallpaper3_bible.jpg" },
+    { name: "The Living One", file: "images/wallpaper1_The_Living_One.jpg" },
+    
+    
+    { name: "My Light and Salvation", file: "images/wallpaper2_My_Light_and_Salvation.jpg" },
+    
+    
+    { name: "The Angel of the LORD", file: "images/wallpaper3_The_Angel_of_the_LORD.jpg" },
+    
+    
     { name: "Cross in Nature", file: "images/wallpaper4_nature_cross.jpg" },
     { name: "Resurrection", file: "images/wallpaper5_resurrection.jpg" },
     { name: "Prayer", file: "images/wallpaper6_prayer.jpg" },
